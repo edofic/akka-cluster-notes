@@ -1,12 +1,10 @@
 ## An experiment with akka clustering
 
-I wanted to try out how simple can it get to make a cluster with akka 2.2. Actually this might work with 2.1...gotta try. 
-
-**EDIT** it works with akka 2.1 with minimal changes to config. see akka21 branch
+I wanted to try out how simple can it get to make a cluster with akka 2.1
 
 Anyhow this is a reference for the future me(and hopefully somebody else).
 
-Run with `sbt run` to set up a seed node and `sbt run -Dakka.remote.netty.tcp.port=2553` or some other number(0 for random free port) to run new nodes. Might be more practical to set 0 as default and then run with specified port for master. 
+Run with `sbt run` to set up a seed node and `sbt run -Dakka.remote.netty.port=2553` or some other number(0 for random free port) to run new nodes. Might be more practical to set 0 as default and then run with specified port for master. 
 
 Change the list of seed nodes to IPs and possibly more than one node for any serious deployment. 
 
